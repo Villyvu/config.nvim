@@ -600,6 +600,7 @@ require('lazy').setup({
   require 'kickstart.plugins.nvim-tree',
   require 'remaps',
   require 'kickstart.plugins.lsp',
+  require 'kickstart.plugins.autoclose',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
