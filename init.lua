@@ -497,6 +497,12 @@ require('lazy').setup({
           { name = 'path' },
         },
       }
+      cmp.setup.filetype({ 'sql' }, {
+        sources = {
+          { name = 'vim-dadbod-completion' },
+          { name = 'buffer' },
+        },
+      })
     end,
   },
 
@@ -590,6 +596,7 @@ require('lazy').setup({
   require 'remaps',
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.autoclose',
+  require 'kickstart.plugins.dadbod',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
