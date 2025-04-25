@@ -243,8 +243,4 @@ return {
       }
     end,
   },
-  {
-    'OmniSharp/omnisharp-vim',
-    { 'Hoffs/omnisharp-extended-lsp.nvim' },
-  },
 }

@@ -463,7 +463,7 @@ require('lazy').setup({
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
           --  completions whenever it has completion options available.
-          ['<C-Space>'] = cmp.mapping.confirm { select = true },
+          ['<Enter>'] = cmp.mapping.confirm { select = true },
 
           -- Think of <c-l> as moving to the right of your snippet expansion.
           --  So if you have a snippet that's like:
@@ -598,6 +598,7 @@ require('lazy').setup({
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.autoclose',
   require 'kickstart.plugins.dadbod',
+  require 'kickstart.plugins.easydotnet',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
