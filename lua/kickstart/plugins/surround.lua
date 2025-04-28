@@ -8,5 +8,8 @@ return {
     }
 
     -- "Keymaps"
+    vim.keymap.set('n', 'æs2', function()
+      vim.cmd 'normal! @2'
+    end, { desc = 'Replay macro from register a' })
   end,
 }
