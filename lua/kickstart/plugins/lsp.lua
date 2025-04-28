@@ -184,7 +184,7 @@ return {
 
         html = {},
 
-        -- csharp_ls = {},
+        omnisharp = {},
 
         lua_ls = {
 
