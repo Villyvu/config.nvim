@@ -1,6 +1,9 @@
 return {
   {
     'Olical/conjure',
+    'tpope/vim-dispatch', -- kick off builds
+    'radenling/vim-dispatch-neovim', -- add nvim terminal emulator and job control to dispatch.vim
+    'clojure-vim/vim-jack-in', -- commands for clj, lein and boot
     ft = { 'clojure', 'fennel', 'python' }, -- etc
     lazy = true,
     init = function()
