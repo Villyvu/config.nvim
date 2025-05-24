@@ -184,7 +184,7 @@ return {
 
         html = {},
 
-        omnisharp = {},
+        -- omnisharp = {},
 
         lua_ls = {
 
@@ -204,7 +204,12 @@ return {
       --    :Mason
       --
       --  You can press `g?` for help in this menu.
-      require('mason').setup()
+      require('mason').setup {
+        registries = {
+          'github:mason-org/mason-registry',
+          'github:Crashdummyy/mason-registry',
+        },
+      }
 
       -- You can add other tools here that you want Mason to instal
       -- for you, so that they are available from within Neovim.
@@ -242,5 +247,16 @@ return {
         -- require('telescope').load_extension 'csharpls_definition',
       }
     end,
+  },
+  {
+    'seblyng/roslyn.nvim',
+    ft = 'cs',
+    ---@module 'roslyn.config'
+    ---@type RoslynNvimConfig
+    opts = {
+      -- your configuration comes here; leave empty for default settings
+      -- NOTE: You must configure `cmd` in `config.cmd` unless you have installed via mason
+      filewatching = 'off',
+    },
   },
 }
