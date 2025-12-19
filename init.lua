@@ -399,12 +399,13 @@ require('lazy').setup({
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
-        -- pickers = {}
+        pickers = {
+          layout_strategy = 'vertical',
+          layout_config = {
+            prompt_position = 'bottom',
+            mirror = true,
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -663,7 +664,6 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        omnisharp = { filetypes = { 'cs' } },
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -761,7 +761,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
+        xml = { 'xmllint' },
+        -- Conform can also run ,multiple formatters sequentially
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
@@ -969,6 +970,7 @@ require('lazy').setup({
   require 'kickstart.plugins.easydotnet',
   require 'kickstart.plugins.nvim-tree',
   require 'kickstart.plugins.conjure',
+  require 'kickstart.plugins.typescript',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`

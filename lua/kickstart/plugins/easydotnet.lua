@@ -14,5 +14,7 @@ return {
     k.set('n', 'ætt', '<cmd>Dotnet testrunner<CR>', { desc = 'Testrunner' })
     k.set('n', 'ætb', '<cmd>Dotnet testrunner refresh build<CR>', { desc = 'Testrunner refresh build' })
     k.set('n', 'æwr', '<cmd>Dotnet watch<CR>', { desc = 'Watch run project' })
+    k.set('n', 'æv', '<cmd>Dotnet project view<CR>', { desc = 'View a project' })
+    k.set('n', 'æap', '<cmd>Dotnet solution add<CR>', { desc = 'Add project to solution' })
   end,
 }
